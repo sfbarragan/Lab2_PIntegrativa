@@ -1,275 +1,301 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="CSS/base.css" />
+    <title>Inicio</title>
+    <script src="JS/gallery.js"></script>
+    <script src="JS/footer.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="CSS/base.css">
-  <title>Inicio</title>
-  <script src="JS/gallery.js"></script>
-  <script src="JS/footer.js"></script>
-</head>
+  <body>
+    <template id="acordionGallery">
+      <style>
+        .gallery_conteiner {
+          width: 1000px;
+          height: 450px;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          margin: 100px auto;
+          box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+          -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+          -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+        }
 
-<body>
-  <template id="acordionGallery">
-    <style>
-      .gallery_conteiner {
-        width: 1000px;
-        height: 450px;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        margin: 100px auto;
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-        -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-        -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-      }
+        .gallery_conteiner ul {
+          width: 2000px;
+        }
 
-      .gallery_conteiner ul {
-        width: 2000px;
-      }
+        .gallery_conteiner li {
+          position: relative;
+          display: block;
+          width: 160px;
+          float: left;
+          border-left: 1px solid #888;
+          box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+          -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+          -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+          transition: all 0.5s;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+        }
 
-      .gallery_conteiner li {
-        position: relative;
-        display: block;
-        width: 160px;
-        float: left;
-        border-left: 1px solid #888;
-        box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-        -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-        transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-      }
+        .gallery_conteiner ul:hover li {
+          width: 40px;
+        }
 
-      .gallery_conteiner ul:hover li {
-        width: 40px;
-      }
+        .gallery_conteiner ul li:hover {
+          width: 1040px;
+        }
 
-      .gallery_conteiner ul li:hover {
-        width: 1040px;
-      }
+        .gallery_conteiner li img {
+          display: block;
+        }
 
-      .gallery_conteiner li img {
-        display: block;
-      }
+        .image_title {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+          background: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 1040px;
+          margin-left: -40px;
+        }
 
-      .image_title {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        background: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 1040px;
-      }
+        .image_title a {
+          display: block;
+          color: #fff;
+          text-decoration: none;
+          padding: 20px;
+          font-size: 20px;
+        }
 
-      .image_title a {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 20px;
-        font-size: 20px;
-      }
-
-      .item {
-        height: 450px;
-        width: 1000px;
-        object-fit: fill;
-      }
-    </style>
-    <section>
-    <div class="gallery_conteiner">
-      <ul>
-        <li>
-          <div class="image_title">
-            <a href="#">Construye tu lugar Especial</a>
-          </div>
-          <a href="#">
-            <img src="img/gaming-setup-4.jpg" alt="gaming-setup-4" class="item" />
-          </a>
-        </li>
-        <li>
-          <div class="image_title">
-            <a href="#">Nvidia RTX 3090 Founders Edition</a>
-          </div>
-          <a href="#">
-            <img src="img/rtx3090.jpg" alt="rtx3090" class="item" />
-          </a>
-        </li>
-        <li>
-          <div class="image_title">
-            <a href="#">Laptop Asus Zenbook</a>
-          </div>
-          <a href="#">
-            <img src="img/asus-zenbook.webp" alt="asus-zenbook" class="item" />
-          </a>
-        </li>
-        <li>
-          <div class="image_title">
-            <a href="#">Laptop Alienware M15</a>
-          </div>
-          <a href="#">
-            <img src="img/alienwarem15.jpg" alt="alienwarem15" class="item" />
-          </a>
-        </li>
-        <li>
-          <div class="image_title">
-            <a href="#">Laptop Lenovo Legion Y530</a>
-          </div>
-          <a href="#">
-            <img src="img/y530teaser.jpg" alt="lenovo-legion-y530" class="item" />
-          </a>
-        </li>
-        <li>
-          <div class="image_title">
-            <a href="#">Laptop Asus G531</a>
-          </div>
-          <a href="#">
-            <img src="img/G531-1-780x405.webp" alt="asus g531" class="item" />
-          </a>
-        </li>
-      </ul>
-    </div>
-    </section>
-  </template>
-  <acordion-gallery></acordion-gallery>
-
-  <template id="footer">
-    <style>
-      .main-footer {
-        background:#282828;
-        color: #828282;
-      }
-
-      .main-footer .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      .footer__title {
-        font-size: 22px;
-        color: white;
-        text-transform: uppercase;
-      }
-
-      .column--50-25 {
-        width: 49%;
-        padding: 20px;
-      }
-
-      .footer__txt .fa-twitter {
-        color: #3bbef5;
-        margin-right: 5px;
-      }
-
-      .footer__link {
-        color: #3498DB;
-      }
-
-      .social-icon {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-
-      .social-icon i {
-        margin-right: 10px;
-        width: 35px;
-        height: 35px;
-        text-align: center;
-        color: white;
-        padding: 10px;
-        border-radius: 50%;
-      }
-
-      .social-icon .fa-facebook-f {
-        background: #3b5998;
-      }
-
-      .social-icon .fa-twitter {
-        background: #3bbef5;
-      }
-
-      .social-icon .fa-pinterest {
-        background: #e23139;
-      }
-
-      .social__link {
-        display: block;
-        text-decoration: none;
-        color: #828282;
-      }
-
-      .contact-icon {
-        display: flex;
-        align-items: center;
-      }
-
-      .contact-icon .fas {
-        color: white;
-        display: block;
-        margin-right: 10px;
-      }
-      .copy {
-        background: #211E1E;
-        padding: 15px;
-        color: white;
-        text-align: center;
-        width: 100%;
-      }
-      .column--50-25 {
-        width: 24%;
-      }
-
-    </style>
-    <footer class="main-footer">
-      <div class="container">
-        <div class="column column--50-25">
-          <h2 class="footer__title"> ESPE Tecnologies 👨‍💻👩‍💻</h2>
-          <p class="footer__txt"> ESPE Tecnologies es una tienda de tecnologia con componentes de alta gama de las mejores marcas del mundo </p>
-          <cite class="footer__author"> ESPE Tecnologies </cite>
+        .item {
+          height: 450px;
+          width: 1000px;
+          object-fit: fill;
+          margin-left: -40px;
+        }
+      </style>
+      <section>
+        <div class="gallery_conteiner">
+          <ul>
+            <li>
+              <div class="image_title">
+                <a href="#">Construye tu lugar Especial</a>
+              </div>
+              <a href="#">
+                <img
+                  src="img/gaming-setup-4.jpg"
+                  alt="gaming-setup-4"
+                  class="item"
+                />
+              </a>
+            </li>
+            <li>
+              <div class="image_title">
+                <a href="#">Nvidia RTX 3090 Founders Edition</a>
+              </div>
+              <a href="#">
+                <img src="img/rtx3090.jpg" alt="rtx3090" class="item" />
+              </a>
+            </li>
+            <li>
+              <div class="image_title">
+                <a href="#">Laptop Asus Zenbook</a>
+              </div>
+              <a href="#">
+                <img
+                  src="img/asus-zenbook.webp"
+                  alt="asus-zenbook"
+                  class="item"
+                />
+              </a>
+            </li>
+            <li>
+              <div class="image_title">
+                <a href="#">Laptop Alienware M15</a>
+              </div>
+              <a href="#">
+                <img
+                  src="img/alienwarem15.jpg"
+                  alt="alienwarem15"
+                  class="item"
+                />
+              </a>
+            </li>
+            <li>
+              <div class="image_title">
+                <a href="#">Laptop Lenovo Legion Y530</a>
+              </div>
+              <a href="#">
+                <img
+                  src="img/y530teaser.jpg"
+                  alt="lenovo-legion-y530"
+                  class="item"
+                />
+              </a>
+            </li>
+            <li>
+              <div class="image_title">
+                <a href="#">Laptop Asus G531</a>
+              </div>
+              <a href="#">
+                <img
+                  src="img/G531-1-780x405.webp"
+                  alt="asus g531"
+                  class="item"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="column column--50-25">
-          <h2 class="footer__title">Connect</h2>
-          <div class="footer__socials">
-            <div class="social-icon">
-              <i class="fab fa-facebook-f"></i>
-              <a class="social__link" href="">Like us on Facebook</a>
-            </div>
-            <div class="social-icon">
-              <i class="fab fa-twitter"></i>
-              <a class="social__link" href="">Like us on Twiter</a>
-            </div>
-            <div class="social-icon">
-              <i class="fab fa-pinterest"></i>
-              <a class="social__link" href="">Follow us on Instagram</a>
-            </div>
-          </div>
-        </div>
-        <div class="column column--50-25">
-          <h2 class="footer__title">Contact</h2>
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-            <p class="contact__txt">ESPE TECNOLOGIES</p>
-          </div>
-          <div class="contact-icon">
-            <i class="fas fa-phone-alt"></i>
-            <p class="contact__txt">0992113464</p>
-          </div>
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-            <p class="contact__txt"> espetec@gmail.com </p>
-          </div>
-        </div>
-      </div>
-      <p class="copy">© 2022 ESPE TECNOLOGIES | Design by <span class="color-span"> ESPE Tecnologies </span></p>
-    </footer>
-  </template>
-  <pag-footer></pag-footer>
-</body>
+      </section>
+    </template>
+    <acordion-gallery></acordion-gallery>
 
+    <template id="footer">
+      <style>
+        .main-footer {
+          background: #282828;
+          color: #828282;
+        }
+
+        .main-footer .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+
+        .footer__title {
+          font-size: 22px;
+          color: white;
+          text-transform: uppercase;
+        }
+
+        .column--50-25 {
+          width: 49%;
+          padding: 20px;
+        }
+
+        .footer__txt .fa-twitter {
+          color: #3bbef5;
+          margin-right: 5px;
+        }
+
+        .footer__link {
+          color: #3498db;
+        }
+
+        .social-icon {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+
+        .social-icon i {
+          margin-right: 10px;
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          color: white;
+          padding: 10px;
+          border-radius: 50%;
+        }
+
+        .social-icon .fa-facebook-f {
+          background: #3b5998;
+        }
+
+        .social-icon .fa-twitter {
+          background: #3bbef5;
+        }
+
+        .social-icon .fa-pinterest {
+          background: #e23139;
+        }
+
+        .social__link {
+          display: block;
+          text-decoration: none;
+          color: #828282;
+        }
+
+        .contact-icon {
+          display: flex;
+          align-items: center;
+        }
+
+        .contact-icon .fas {
+          color: white;
+          display: block;
+          margin-right: 10px;
+        }
+        .copy {
+          background: #211e1e;
+          padding: 15px;
+          color: white;
+          text-align: center;
+          width: 100%;
+        }
+        .column--50-25 {
+          width: 24%;
+        }
+      </style>
+      <footer class="main-footer">
+        <div class="container">
+          <div class="column column--50-25">
+            <h2 class="footer__title">ESPE Tecnologies 👨‍💻👩‍💻</h2>
+            <p class="footer__txt">
+              ESPE Tecnologies es una tienda de tecnologia con componentes de
+              alta gama de las mejores marcas del mundo
+            </p>
+            <cite class="footer__author"> ESPE Tecnologies </cite>
+          </div>
+          <div class="column column--50-25">
+            <h2 class="footer__title">Connect</h2>
+            <div class="footer__socials">
+              <div class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+                <a class="social__link" href="">Like us on Facebook</a>
+              </div>
+              <div class="social-icon">
+                <i class="fab fa-twitter"></i>
+                <a class="social__link" href="">Like us on Twiter</a>
+              </div>
+              <div class="social-icon">
+                <i class="fab fa-pinterest"></i>
+                <a class="social__link" href="">Follow us on Instagram</a>
+              </div>
+            </div>
+          </div>
+          <div class="column column--50-25">
+            <h2 class="footer__title">Contact</h2>
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+              <p class="contact__txt">ESPE TECNOLOGIES</p>
+            </div>
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+              <p class="contact__txt">0992113464</p>
+            </div>
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+              <p class="contact__txt">espetec@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <p class="copy">
+          © 2022 ESPE TECNOLOGIES | Design by
+          <span class="color-span"> ESPE Tecnologies </span>
+        </p>
+      </footer>
+    </template>
+    <pag-footer></pag-footer>
+  </body>
 </html>
