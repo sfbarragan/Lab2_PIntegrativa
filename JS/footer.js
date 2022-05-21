@@ -10,4 +10,3 @@ class Footer extends HTMLElement{
 }
 }
 window.customElements.define('pag-footer',Footer)
-
