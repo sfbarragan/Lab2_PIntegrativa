@@ -15,7 +15,7 @@ const $container = document.querySelector(".img"),
       img: "https://i.blogs.es/58de84/fan-01/1366_2000.jpeg",
     },
     {
-      título: "Audio Gamer RGB",,
+      title: "Audio Gamer RGB",
       img: "https://m.media-amazon.com/images/I/319UcQ9TFLL._SL500_.jpg",
     },
   ];
