@@ -16,3 +16,4 @@ class AcordionGallery extends HTMLElement{
 }
 
 window.customElements.define('acordion-gallery', AcordionGallery);
+

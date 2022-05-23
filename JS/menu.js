@@ -7,7 +7,6 @@ class Menu extends HTMLElement{
         const t =document.querySelector('#menu');
         const instance = t.content.cloneNode(true);
         shadowRoot.appendChild(instance);
-}
+    }
 }
 window.customElements.define('pag-menu',Menu)
-
